@@ -7,28 +7,23 @@ import { Component } from '@angular/core';
 })
 export class TodoComponent {
 
-  tasks: string[] = []; // Array to store tasks
-
-  // Function to handle adding tasks
+  tasks: string[] = []; 
   onAddTask(taskInput: HTMLInputElement) {
-    const task = taskInput.value.trim(); // Get the value from input
+    const task = taskInput.value.trim(); 
     if (task) {
-      this.addTask(task); // Add the task
-      this.resetInput(taskInput); // Clear the input
+      this.addTask(task); 
+      this.resetInput(taskInput); 
     }
   }
 
-  // Add task to the array
   addTask(task: string) {
     this.tasks.push(task);
   }
 
-  // Reset the input field
   resetInput(input: HTMLInputElement) {
     input.value = '';
   }
 
-  // Delete a task
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
   }
