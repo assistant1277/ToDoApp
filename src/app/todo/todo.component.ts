@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent {
-
   tasks: string[]=[]; 
   onAddTask(taskInput:HTMLInputElement) {
     const task=taskInput.value.trim(); 
