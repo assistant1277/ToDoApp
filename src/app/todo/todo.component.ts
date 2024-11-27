@@ -7,24 +7,24 @@ import { Component } from '@angular/core';
 })
 export class TodoComponent {
 
-  tasks: string[] = []; 
-  onAddTask(taskInput: HTMLInputElement) {
-    const task = taskInput.value.trim(); 
+  tasks: string[]=[]; 
+  onAddTask(taskInput:HTMLInputElement) {
+    const task=taskInput.value.trim(); 
     if (task) {
       this.addTask(task); 
       this.resetInput(taskInput); 
     }
   }
 
-  addTask(task: string) {
+  addTask(task:string) {
     this.tasks.push(task);
   }
 
-  resetInput(input: HTMLInputElement) {
-    input.value = '';
+  resetInput(input:HTMLInputElement) {
+    input.value='';
   }
 
-  deleteTask(index: number) {
-    this.tasks.splice(index, 1);
+  deleteTask(index:number) {
+    this.tasks.splice(index,1);
   }
 }
